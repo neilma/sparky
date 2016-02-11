@@ -1,0 +1,29 @@
+<div class="row enquiry-form-container">
+  <div class="col-md-sm-2 col-sm-2"></div>
+  <div class="col-md-sm-4 col-sm-4">
+    <div class="enquiry-form">
+      <form name="enquiryForm" ng-controller="EnquiryFormCtrl">
+        <div class="form-group" ng-class="{ 'has-error': enquiryForm.name.$invalid && enquiryForm.name.$dirty}">
+          <label for="enquiryName">Name</label>
+          <input type="text" class="form-control" id="enquiryName" name="name" ng-model="enquiry.name" required>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': enquiryForm.email.$invalid && enquiryForm.email.$dirty }" >
+          <label for="enquiryEmail">Email</label>
+          <input type="email" class="form-control" id="enquiryEmail" name="email" ng-model="enquiry.email" required />
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': enquiryForm.phone.$invalid && enquiryForm.phone.$dirty }" >
+          <label for="enquiryPhone">Phone</label>
+          <input type="text" class="form-control" id="enquiryPhone" name="phone" ng-model="enquiry.phone"/>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': enquiryForm.query.$invalid && enquiryForm.query.$dirty }" >
+          <label for="enquiryQuery">Query</label>
+          <textarea type="text" class="form-control" id="enquiryQuery" name="query" ng-model="enquiry.query"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary custom-form-button", ng-click="enquiryForm.$valid && enquire(enquiry)">Submit</button>
+        <button type="reset" class="btn btn-primary custom-form-button">Reset</button>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-sm-4 col-sm-4"></div>
+  <div class="col-md-sm-2 col-sm-2"></div>
+</div>
