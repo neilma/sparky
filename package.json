@@ -37,8 +37,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "postinstall": "grunt uglify",
-    "start": "node server.js"
+    "start": "grunt serve"
   },
   "dependencies": {
     "grunt": "0.4.5",
