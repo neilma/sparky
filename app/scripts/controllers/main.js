@@ -2,10 +2,10 @@
 
 /**
  * @ngdoc function
- * @name electricianApp.controller:MainCtrl
+ * @name sparkyApp.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the electricianApp
+ * Controller of the sparkyApp
  */
 angular.module('sparkyApp')
   .controller('MainCtrl', function () {

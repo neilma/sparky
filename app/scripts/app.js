@@ -2,9 +2,9 @@
 
 /**
  * @ngdoc overview
- * @name electricianApp
+ * @name sparkyApp
  * @description
- * # electricianApp
+ * # sparkyApp
  *
  * Main module of the application.
  */
