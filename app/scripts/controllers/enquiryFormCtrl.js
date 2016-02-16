@@ -8,9 +8,19 @@
  * Controller of the sparkyApp
  */
 angular.module('sparkyApp')
-  .controller('EnquiryFormCtrl', function ($scope) {
+  .controller('EnquiryFormCtrl', function ($scope, $http, Flash) {
 
     $scope.enquire = function(enquiry) {
-      console.log(enquiry.name.value);
+      Flash.create('success', 'Thanks for your enquiry, we\'ll contact you ASAP.', 0, {class: 'custom-flash'}, true);
+      $http({
+        url: '/enquiry',
+        method: 'POST',
+        data: { 'data': enquiry },
+        headers: { 'Content-Type': 'application/json' }
+      }).then(function successCallback(resp) {
+        console.log(resp);
+      }, function errorCallback(resp) {
+        console.log(resp);
+      });
     };
   });
