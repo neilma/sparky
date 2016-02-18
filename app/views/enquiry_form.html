@@ -22,7 +22,7 @@
           <label for="enquiryQuery">Query</label>
           <textarea type="text" class="form-control" id="enquiryQuery" name="query" ng-model="enquiry.query"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary custom-form-button" ng-click="enquiryForm.$valid && enquire(enquiry)">Submit</button>
+        <button type="submit" class="btn btn-primary custom-form-button" ng-click="enquiryForm.$valid && enquire(enquiry)" ng-disabled="submitted">{{submitButtonText}}</button>
         <button type="reset" class="btn btn-primary custom-form-button">Reset</button>
       </form>
     </div>

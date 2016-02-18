@@ -9,9 +9,11 @@
  */
 angular.module('sparkyApp')
   .controller('EnquiryFormCtrl', function ($scope, $http, Flash) {
-
+    $scope.submitButtonText = 'Submit';
     $scope.enquire = function(enquiry) {
       Flash.create('success', 'Thanks for your enquiry, we\'ll contact you ASAP.', 0, {class: 'custom-flash'}, true);
+      $scope.submitted = true;
+      $scope.submitButtonText = 'Submitted!';
       $http({
         url: '/enquiry',
         method: 'POST',
